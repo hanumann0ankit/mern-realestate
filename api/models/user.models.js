@@ -1,23 +1,22 @@
-import { strict } from "assert";
-import { timeStamp } from "console";
+
 import mongoose from "mongoose";
 
-const userSchema = mongoose.Schema({
+const userSchema =new mongoose.Schema({
   username: {
     type: String,
-    require: true,
+    required: true,
     unique: true,
   },
   email: {
     type: String,
-    require: true,
+    required: true,
     unique: true,
   },
   password: {
     type: String,
-    require: true,
+    required: true,
   }
-},{timeStamp:true});
+},{timestamps:true});
 
 
 
